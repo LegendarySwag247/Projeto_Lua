@@ -1,0 +1,26 @@
+-- How to make a age system
+local age 
+local Loop = 'Y'
+
+while Loop == 'Y' or Loop == 'y' do
+  
+  print("\nLet's start a new age...")
+  print("Type your age:")
+  age = io.read()
+  age = tonumber(age)
+
+  if age >= 18 then
+    
+    print("\nCan drink\n")
+  
+  else
+    
+    print("\nCan not drink\n")
+  
+  end
+  
+  print("Would you like to check you age again?(Y/N)")
+  Loop = io.read()
+end
+
+print("\nThank you for using the system!\n")

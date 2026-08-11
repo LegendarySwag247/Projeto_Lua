@@ -1,0 +1,131 @@
+local choose
+local shapetwo
+local shapethree
+local loop = true
+local numberone
+local numbertwo
+local numberthree
+
+function SquareArea(a)
+    local area = a^2
+    return area
+end
+
+function RectangleArea(a, b)
+    local area = a*b
+    return area
+end
+
+function TriangleArea(b, h)
+    local area = (b*h)/2
+    return area
+end
+
+function TrapezeArea(s, b, h)
+    local area = (s+b)*h/2
+    return area
+end
+
+function CubeVolume(a)
+    local volume = a^3
+    return volume
+end
+
+while loop == true do
+    print("\n---Choose a dimension---")
+    print("1) 2d")
+    print("2) 3d")
+    print("3) Leave")
+    choose = io.read()
+    choose = tonumber(choose)
+
+    if choose == 1 then
+        print("\n---Choose a 2d shape---")
+        print("1) Square")
+        print("2) Rectangle")
+        print("3) Triangle")
+        print("4) Trapeze")
+        print("5) Parallelogram")
+        shapetwo = io.read()
+        shapetwo = tonumber(shapetwo)
+
+        if shapetwo == 1 then
+            print("Enter a number:")
+            numberone = io.read()
+            numberone = tonumber(numberone)
+            
+            print("The area of the shape is "..SquareArea(numberone).." units square.")
+
+        elseif shapetwo == 2 then
+            print("Enter the base number:")
+            numberone = io.read()
+            numberone = tonumber(numberone)
+            print("Enter the hight number:")
+            numbertwo = io.read()
+            numbertwo = tonumber(numbertwo)
+
+            print("The area of the shape is "..RectangleArea(numberone, numbertwo).." units square.")
+        
+        elseif shapetwo == 3 then
+            print("Enter the base number:")
+            numberone = io.read()
+            numberone = tonumber(numberone)
+            print("Enter the hight number:")
+            numbertwo = io.read()
+            numbertwo = tonumber(num/bertwo)
+
+            print("The area of the shape is "..TriangleArea(numberone, numbertwo).." units square.")
+        
+        elseif shapetwo == 4 then
+            print("Enter the small base number:")
+            numberone = io.read()
+            numberone = tonumber(numberone)
+            print("Enter the big base number:")
+            numbertwo = io.read()
+            numbertwo = tonumber(numbertwo)
+            print("Enter the hight number:")
+            numberthree = io.read()
+            numberthree = tonumber(numberthree)
+
+            print("The area of the shape is "..TrapezeArea(numberone, numbertwo, numberthree).." units square.")
+
+        elseif shapetwo == 5 then
+            print("Enter the base number:")
+            numberone = io.read()
+            numberone = tonumber(numberone)
+            print("Enter the hight number:")
+            numbertwo = io.read()
+            numbertwo = tonumber(numbertwo)
+
+            print("The area of the shape is "..RectangleArea(numberone, numbertwo).." units square.")
+
+        end
+
+
+    elseif choose == 2 then
+        print("\n---Choose a 3d shape---")
+        print("1) Cube")
+        print("2) Prism")
+        print("3) Pyramid")
+        print("4) Cylinder")
+        print("5) Cone")
+        print("6) Sphere")
+        shapethree = io.read()
+        shapethree = tonumber(shapethree)
+        if shapethree == 1 then
+            print("Enter a number:")
+            numberone = io.read()
+            numberone = tonumber(numberone)
+
+            print("The volume of the shape is "..CubeVolume(numberone).." units cube.")
+        
+        end
+
+    
+    elseif choose == 3 then
+        loop = false
+        print("Leaving the system. Thank you for using our program.")
+    end
+
+end
+
